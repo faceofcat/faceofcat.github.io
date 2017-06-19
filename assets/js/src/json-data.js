@@ -144,14 +144,14 @@ function initJsonView() {
         var container = template.clone();
         var view = net.ndrei.json.JSONView.create(container.find('#gigi'), xx.data);
         net.ndrei.json.JSONView.create(container.find('#original'), xx.data, jsonConfig);
-        net.ndrei.json.JSONView.create(container.find('#parsed'), view.context.rootEntityInfo, jsonConfig);
+        net.ndrei.json.JSONView.create(container.find('#parsed'), view.context ? view.context.rootEntityInfo : { warn: 'root entity not found' }, jsonConfig);
         net.ndrei.json.JSONView.create(container.find('#view'), view.viewTree.root, jsonConfig);
         container.find('.panel-heading > h3').text(xx.title);
-        template.after(container);
+        template.before(container);
         container.show();
         container.on('click', 'ul.nav-tabs a', function (e) {
             e.preventDefault();
-            var tab = $(this).attr('href');
+            var tab = $(this).attr('href') || '';
             tab = tab.substr(tab.lastIndexOf('#') + 1);
             container.find('#source div.tab-content > div').removeClass('active');
             container.find('#source div.tab-content > div#' + tab).addClass('active');
