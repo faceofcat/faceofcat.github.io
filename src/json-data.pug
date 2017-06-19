@@ -11,12 +11,12 @@ block extra-head
 
 block content
     div#json-template.panel.panel-default(style="display: none;")
-        div.panel-heading
-            h3 Title
+        div.panel-heading(style="font-size: 14px; font-weight: bold;")
+            span.text-success Title
         div.panel-body
             table.table
-                te#header
-                    td#source(style="width: 50%")
+                tr#header
+                    td#source.col-md-5
                         ul.nav.nav-tabs(role="tablist")
                             li.active(role="presentation")
                                 a(href="#original", aria-controls="original", role="tab", data-toggle="tab") Original
@@ -28,7 +28,7 @@ block content
                             div#original.tab-pane.active(role="tabpanel")
                             div#parsed.tab-pane(role="tabpanel")
                             div#view.tab-pane(role="tabpanel")
-                    td(style="width: 50%")
+                    td.col-md-4
                         ul.nav.nav-tabs(role="tablist")
                             li.active(role="presentation")
                                 a(href="#gigi", aria-controls="gigi", role="tab", data-toggle="tab") Output

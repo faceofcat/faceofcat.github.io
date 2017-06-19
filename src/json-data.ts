@@ -154,7 +154,7 @@ function initJsonView(): any {
         net.ndrei.json.JSONView.create(container.find('#parsed'), view.context ? view.context.rootEntityInfo : { warn: 'root entity not found' }, jsonConfig);
         net.ndrei.json.JSONView.create(container.find('#view'), (<any>view.viewTree).root, jsonConfig);
 
-        container.find('.panel-heading > h3').text(xx.title);
+        container.find('.panel-heading > span').text(xx.title);
         template.before(container);
         container.show();
 

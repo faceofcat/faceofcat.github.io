@@ -146,7 +146,7 @@ function initJsonView() {
         net.ndrei.json.JSONView.create(container.find('#original'), xx.data, jsonConfig);
         net.ndrei.json.JSONView.create(container.find('#parsed'), view.context ? view.context.rootEntityInfo : { warn: 'root entity not found' }, jsonConfig);
         net.ndrei.json.JSONView.create(container.find('#view'), view.viewTree.root, jsonConfig);
-        container.find('.panel-heading > h3').text(xx.title);
+        container.find('.panel-heading > span').text(xx.title);
         template.before(container);
         container.show();
         container.on('click', 'ul.nav-tabs a', function (e) {

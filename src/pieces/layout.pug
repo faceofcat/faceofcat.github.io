@@ -2,9 +2,9 @@ doctype html
 html
     include head
     block extra-head
-    body
+    body(style="padding-top: 70px;")
         include header
         block docs-header
-        .container
+        div.container(role="main")
             block content
             include footer
