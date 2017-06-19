@@ -1,0 +1,33 @@
+{
+  "name": "faceofcat.github.io",
+  "version": "1.0.0",
+  "description": "Face of Cat's Web Stuff",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faceofcat/faceofcat.github.io.git"
+  },
+  "author": "Face of Cat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/faceofcat/faceofcat.github.io/issues"
+  },
+  "homepage": "https://github.com/faceofcat/faceofcat.github.io#readme",
+  "devDependencies": {
+    "@types/jquery": "^3.2.1",
+    "@types/node": "^7.0.31",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-npm": "0.0.2",
+    "grunt-ts": "^6.0.0-beta.16",
+    "jstransformer-markdown-it": "^2.0.0",
+    "typescript": "^2.3.4"
+  }
+}

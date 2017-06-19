@@ -1,0 +1,18 @@
+nav.navbar.navbar-default
+    div.container
+        div.navbar-header
+            a.navbar-brand(href="/")
+                img(src="/assets/favicon-32x32.png", alt="Face of Cat", width=20, height=20)
+            button.pull-left.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#navbar", aria-expanded="false")
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+        div#navbar.collapse.navbar-collapse
+            ul.nav.navbar-nav
+                each val, key in menu
+                    if val == '{{separator}}'
+                        li(class='navbar-text separator')= key
+                    else
+                        li(class=(selectedMenuItem === key) ? 'active' : '')
+                            a(href=val, title=key)!= key

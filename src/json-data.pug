@@ -1,0 +1,35 @@
+extends ./pieces/layout.pug
+
+block extra-head
+    link(rel="stylesheet", href="https://cdn.rawgit.com/faceofcat/JSON-Data-View/master/dist/jsonview.css")
+    script(type="text/javascript", src="https://cdn.rawgit.com/faceofcat/JSON-Data-View/master/dist/jsonview.js")
+    script(type="text/javascript", src="https://cdn.rawgit.com/faceofcat/JSON-Data-View/master/dist/jsonview.extra.js")
+    script(type="text/javascript", src="assets/js/src/json-data.js")
+
+block content
+    div#json-template.panel.panel-default(style="display: none;")
+        div.panel-heading
+            h3 Title
+        div.panel-body
+            table.table
+                te#header
+                    td#source(style="width: 50%")
+                        ul.nav.nav-tabs(role="tablist")
+                            li.active(role="presentation")
+                                a(href="#original", aria-controls="original", role="tab", data-toggle="tab") Original
+                            li(role="presentation")
+                                a(href="#parsed", aria-controls="parsed", role="tab", data-toggle="tab") Parsed
+                            li(role="presentation")
+                                a(href="#view", aria-controls="view", role="tab", data-toggle="tab") View Tree
+                        div.tab-content
+                            div#original.tab-pane.active(role="tabpanel")
+                            div#parsed.tab-pane(role="tabpanel")
+                            div#view.tab-pane(role="tabpanel")
+                    td(style="width: 50%")
+                        ul.nav.nav-tabs(role="tablist")
+                            li.active(role="presentation")
+                                a(href="#gigi", aria-controls="gigi", role="tab", data-toggle="tab") Output
+                        div.tab-content
+                            div#gigi.tab-pane.active(role="tabpanel")
+    script(type="text/javascript")
+        | $(function() { initJsonView(); });
